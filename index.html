@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="HandheldFriendly" content="true">
+
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/fontello.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="scss/style.css">
+</head>
+<body>
+ <div class="main-wrapper">
+
+    <!-- Start topbar header -->
+    <header class="topbar fixed-top">
+        <nav class="navbar top-navbar navbar-expand navbar-light">
+            <!--It's visible only large view-->
+            <!--Brand logo for large view-->
+            <div class="navbar-header d-none desktop-navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img src="gain-logo.png" class="d-inline-block align-middle" alt="Gain">
+                </a>
+            </div>
+
+            <!--It's visible only mobile view-->
+            <ul class="navbar-nav mr-auto nav-left">
+                <li class="nav-item mobile-left-menu-bar">
+                    <a href="#" id="js-show-left-bar" class="nav-link">
+                        <i class="icon-g-align-left"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav nav-right">
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link badge-alert-container">
+                        <i class="icon-tasks"></i>
+                        <span class="badge-alert">1</span>
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link badge-alert-container dropdown-toggle "
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-bell-alt"></i>
+                        <span class="badge-alert">2</span>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right animated bounceInDown topbar-dropdown"
+                         aria-labelledby="js-temporary-notification">
+                        <div class="p-3"> Notifications</div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">
+                        <img src="imge/tushar.jpg" alt="Hasibul" class="avatar avatar-xs">
+                        <span class="profile-name"> Hasibul Hasan </span>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right animated bounceInDown topbar-dropdown"
+                         aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">My profile</a>
+                        <a class="dropdown-item" href="#">Account settings</a>
+                        <a class="dropdown-item" href="#">Team settings</a>
+                        <a class="dropdown-item" href="#">Change account</a>
+                        <a class="dropdown-item" href="#">Create new account</a>
+
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Log out</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- End topbar header-->
+
+    <!-- Start left sidebar - style you can find in sidebar.scss -->
+    <aside class="left-sidebar left-border-menu">
+        <!--Brand logo for mobile-->
+        <div class="navbar-header clearfix d-none mobile-navbar-header">
+            <a class="navbar-brand" href="#">
+                <div>
+                    <img src="gain-logo.png" class="d-inline-block align-middle" alt="Gain">
+                </div>
+                <div class="brand-name">Gain</div>
+            </a>
+            <span class="closed-left-bar" id="js-closed-left-bar"><i class="icon-g-arrow-circle-left"></i></span>
+        </div>
+        <div class="clearfix left-nav-item-container">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="icon-home"></i>
+                        <br class="d-block d-sm-none">
+                        <span class="menu-text">Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        <i class="icon-address-book"></i>
+                       <br class="d-block d-sm-none">
+                        <span class="menu-text">Contacts</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="icon-bullseye"></i>
+                        <br>
+                        <span class="menu-text">Deals</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="icon-barcode"></i>
+                        <br>
+                        <span class="menu-text">Products</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="icon-columns"></i>
+                        <br class="d-block d-sm-none">
+                        <span class="menu-text">Projects</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="icon-commenting"></i>
+                        <br class="d-block d-sm-none">
+                        <span class="text-break menu-text">Conver<span class="text-break-point">-<br></span>sations</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="demo-icon icon-calendar"></i>
+                        <br class="d-block d-sm-none">
+                        <span class="menu-text">Calendar</span>
+                    </a>
+                </li>
+                <li class="nav-item sub-menu left-sub-menu">
+                    <a class="nav-link" href="#">
+                        <i class="icon-basket"></i>
+                        <br class="d-block d-sm-none">
+                        <span class="menu-text">Sales</span>
+                        <span class="toggle-icon icon-g-angle-right"></span>
+                    </a>
+                    <div class="sub-menu-container-one animated fadeInDown">
+                        <nav class="nav flex-column ">
+                            <a class="nav-link" href="#">Creat orders</a>
+                            <a class="nav-link" href="#">All orders</a>
+                            <a class="nav-link active" href="#">Sales reports</a>
+                            <a class="nav-link" href="#">Register logs</a>
+                        </nav>
+                    </div>
+
+                </li>
+                <li class="nav-item sub-menu left-sub-menu">
+                    <a class="nav-link" href="#">
+                        <i class="icon-clock"></i>
+                        <br class="d-block d-sm-none">
+                        <span class="menu-text">Timelogs</span>
+                        <span class="toggle-icon icon-g-angle-right"></span>
+                    </a>
+
+                    <div class="sub-menu-container-two animated fadeInDown">
+                        <nav class="nav flex-column ">
+                            <a class="nav-link" href="#">Time sheet</a>
+                            <a class="nav-link" href="#">Reports</a>
+                        </nav>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <!-- End left sidebar-->
+
+
+    <div class="page-wrapper">
+        <div class="container-fluid clearfix">
+            <!--End contact details-->
+            <div class="d-table details-container">
+                <div class="d-table-cell details-left-panel">
+                    <img class="details-item-img" src="imge/DSCxdd_0021.jpg" alt="Hasibul">
+
+                    <div class="item-info-box avatar-info-box">
+                        <h4 class="text-primary">Hasibul Hasan</h4>
+
+                        <div>Developer at Regfire solutions</div>
+
+                        <div class="item-social-link-box">
+                            <a class="social-link" href=""><i class="icon-facebook"></i></a>
+                            <a class="social-link" href=""><i class="icon-twitter"></i></a>
+                            <a class="social-link" href=""><i class="icon-g-link-ext"></i></a>
+                        </div>
+                    </div>
+
+
+                    <div class="card item-info-box">
+                        <div class="card-body">
+                            <div class="item-sub-title"> Tags</div>
+
+                            <span class="tag tag-primary">Facebook</span>
+                            <span class="tag tag-danger">VIP</span>
+                            <span class="tag tag-warning">Something</span>
+                        </div>
+                    </div>
+
+
+                    <div class="card item-info-box">
+                        <div class="card-body">
+                            <div class="item-sub-title"> Emails</div>
+
+                            <span class="tag tag-info">Office</span>&nbsp;Hasibul@regfire.com
+                        </div>
+                    </div>
+
+
+                    <div class="card item-info-box">
+                        <div class="card-body">
+                            <div class="item-sub-title"> Phones</div>
+
+                            <span class="tag tag-info">Home</span> +0123456789
+                        </div>
+                    </div>
+
+                    <div class="card item-info-box">
+                        <div class="card-body">
+                            <div class="item-sub-title"> Addresses</div>
+
+                            <span class="tag tag-info">Office</span> 12/6 Pallabi, Mirpur, Dhaka.
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="d-table-cell details-right-panel">
+                    <!--Start contact status -->
+                    <div class="card-deck details-item-status-box">
+                        <div class="card-body card-body-primary">
+                            <div class="media">
+                                <span class="d-flex align-self-center mr-3" style="font-size: 40px;">2</span>
+
+                                <div class="media-body">
+                                    <h5 class="mt-0">Active Deals</h5>
+                                    $200,00 pipeline value
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body card-body-success">
+                            <div class="media">
+                                <span class="d-flex align-self-center mr-3" style="font-size: 40px;">5</span>
+
+                                <div class="media-body">
+                                    <h5 class="mt-0">Projects</h5>
+                                    2/5 projects completed
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body card-body-info">
+                            <div class="media">
+                                <span class="d-flex align-self-center mr-3" style="font-size: 40px;">2</span>
+
+                                <div class="media-body">
+                                    <h5 class="mt-0">Active Deals</h5>
+                                    $200,00 pipeline value
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body card-body-secondary">
+                            <div class="media">
+                                <span class="d-flex align-self-center mr-3" style="font-size: 40px;">5</span>
+
+                                <div class="media-body">
+                                    <h5 class="mt-0">Projects</h5>
+                                    2/5 projects completed
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End contact status -->
+
+                    <!--Start contact about article -->
+                    <div class="details-item-about-box">
+                        <div class="card-body">
+                            <div class="item-sub-title text-primary"> About</div>
+                            <p> Found this contact from facebook. Lorem ipsum dolor sit amet, consectetur adipisicing
+                                elit. Alias dolorem doloribus iste mollitia quam quisquam reiciendis? Adipisci animi
+                                assumenda enim fugiat magni omnis praesentium, sequi totam. Amet consectetur id
+                                natus. </p>
+                        </div>
+                    </div>
+                    <!--End contact about article -->
+
+                    <!--Start owner actions -->
+                    <div class="row details-item-owner-box">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-4">
+                            <div class="media">
+                                <img src="imge/tushar.jpg" alt="user" class="avatar rounded-circle avatar-xs mr-2">
+
+                                <div class="media-body">
+                                    <div> Hasibul Hasan</div>
+                                    <small class="text-muted"> Developer</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8 item-owner-actions-box">
+                            <btn class="btn btn-primary btn-sm">Send Email</btn>
+                            <btn class="btn btn-primary btn-sm">Add Note</btn>
+                            <btn class="btn btn-primary btn-sm">Add Meeting</btn>
+                            <btn class="btn btn-primary btn-sm">Add Deal</btn>
+                        </div>
+                    </div>
+                    <!--End owner actions -->
+
+                    <!--Start timeline  -->
+                    <div class="details-item-timeline-box">
+                        <div class="clearfix">
+                            <nav class="nav nav-tabs responsive-tabs js-responsive-tabs" id="js-contact-tab">
+                                <a class="nav-item nav-link active" href="#contact-activities"
+                                   data-toggle="tab">Activities</a>
+                                <a class="nav-item nav-link" href="#contact-files" data-toggle="tab">Files</a>
+                                <a class="nav-item nav-link" href="#contact-notes" data-toggle="tab">Notes</a>
+                                <a class="nav-item nav-link" href="#contact-tasks" data-toggle="tab">Tasks</a>
+                                <a class="nav-item nav-link" href="#contact-meetings" data-toggle="tab">Meetings</a>
+                                <a class="nav-item nav-link" href="#contact-emails" data-toggle="tab">Emails</a>
+                                <a class="nav-item nav-link" href="#contact-change-logs" data-toggle="tab">Logs</a>
+
+                                <div class="dropdown tab-dropdown">
+                                    <button class="btn btn-light tab-more" type="button" data-toggle="dropdown">
+                                        <span class="tab-more-text">More</span> <i class="icon-angle-down"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right js-tab-dropdown"></div>
+                                </div>
+                            </nav>
+                        </div>
+
+                        <div class="tab-content" id="contact-tabContent">
+                            <div class="tab-pane active" id="contact-activities">
+                                <section class="timeline">
+
+                                    <div class="timeline-line"></div>
+
+                                    <div class="timeline-content">
+                                        <div class="timeline-article">
+                                            <div class="content-container">
+                                                <div class="content">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Accusantium aut
+                                                    consequatur esse eveniet ipsa labore magnam molestias necessitatibus
+                                                    nobis,
+                                                    odio repellendus tempora ullam voluptatibus. Aperiam magnam nihil
+                                                    omnis quam
+                                                    qui.
+                                                </div>
+                                            </div>
+                                            <div class="breakpoint">
+                                                <span class="icon-facebook"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="timeline-article">
+                                            <div class="content-container">
+                                                <div class="content">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Accusantium aut
+                                                    consequatur esse eveniet ipsa labore magnam molestias necessitatibus
+                                                    nobis,
+                                                    odio repellendus tempora ullam voluptatibus. Aperiam magnam nihil
+                                                    omnis quam
+                                                    qui.
+                                                </div>
+                                            </div>
+                                            <div class="breakpoint">
+                                                <span class="icon-phone"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-content">
+                                        <div class="timeline-article">
+                                            <div class="content-container">
+                                                <div class="content">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Accusantium aut
+                                                    consequatur esse eveniet ipsa labore magnam molestias necessitatibus
+                                                    nobis,
+                                                    odio repellendus tempora ullam voluptatibus. Aperiam magnam nihil
+                                                    omnis quam
+                                                    qui.
+                                                </div>
+                                            </div>
+                                            <div class="breakpoint">
+                                                <span class="icon-tasks"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="timeline-article">
+                                            <div class="content-container">
+                                                <div class="content">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Accusantium aut
+                                                    consequatur esse eveniet ipsa labore magnam molestias necessitatibus
+                                                    nobis,
+                                                    odio repellendus tempora ullam voluptatibus. Aperiam magnam nihil
+                                                    omnis quam
+                                                    qui.
+                                                </div>
+                                            </div>
+                                            <div class="breakpoint">
+                                                <span class="icon-facebook"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="timeline-article">
+                                            <div class="content-container">
+                                                <div class="content">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Accusantium aut
+                                                    consequatur esse eveniet ipsa labore magnam molestias necessitatibus
+                                                    nobis,
+                                                    odio repellendus tempora ullam voluptatibus. Aperiam magnam nihil
+                                                    omnis quam
+                                                    qui.
+                                                </div>
+                                            </div>
+                                            <div class="breakpoint">
+                                                <span class="icon-tasks"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </section>
+                            </div>
+                            <div class="tab-pane" id="contact-files">
+                                <h4>Show files here</h4>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis
+                                    fugiat in, non quis recusandae repudiandae soluta temporibus voluptates. Amet aut ea
+                                    eligendi harum possimus quo repellat rerum sequi suscipit.
+                                </p>
+                            </div>
+                            <div class="tab-pane" id="contact-notes">
+                                <h4>Show notes here</h4>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis
+                                    fugiat in, non quis recusandae repudiandae soluta temporibus voluptates. Amet aut ea
+                                    eligendi harum possimus quo repellat rerum sequi suscipit.
+                                </p>
+                            </div>
+                            <div class="tab-pane" id="contact-tasks">
+                                <h4>Show tasks here</h4>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis
+                                    fugiat in, non quis recusandae repudiandae soluta temporibus voluptates. Amet aut ea
+                                    eligendi harum possimus quo repellat rerum sequi suscipit.
+                                </p>
+                            </div>
+                            <div class="tab-pane" id="contact-meetings">
+                                <h4>Show meetings here</h4>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, amet autem
+                                    beatae doloremque exercitationem, ipsum, itaque iusto magnam nemo neque nisi non
+                                    odit officiis quos recusandae saepe similique suscipit! Numquam!
+                                </p>
+                            </div>
+                            <div class="tab-pane" id="contact-emails">
+                                <h4>Show emails here</h4>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consequuntur
+                                    distinctio doloribus eos error esse ex excepturi ipsa libero, maxime minus nobis non
+                                    quam quas, quisquam tempora vero voluptates voluptatibus.
+                                </p>
+                            </div>
+                            <div class="tab-pane" id="contact-change-logs">
+                                <h4>Show change logs here</h4>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias animi consequatur
+                                    dolores eaque harum iure, labore, odit quae quis quod repellendus tempora unde.
+                                    Consequatur eligendi molestias odit soluta vitae?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End timeline-->
+
+                </div>
+            </div>
+            <!--End contact details-->
+
+        </div>
+
+    </div>
+    <!-- End page wrapper-->
+</div>
+	
+	
+    <script src="js/jquery-slim.min.js"></script>
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" scr="js/main.js"></script>
+</body>
+</html>
