@@ -148,15 +148,16 @@
                     </a>
                 </li>
 
-                <li class="nav-item sub-menu left-sub-menu">
+                <li class="nav-item sub-menu left-sub-menu" onclick="leftMenuOne()">
                     <a class="nav-link" href="#">
                         <i class="icon-basket"></i>
                         <br class="d-block d-sm-none">
                         <span class="menu-text">Sales</span>
-                        <span class="toggle-icon icon-g-angle-right"></span>
+                        <span id="toggleOne" class="toggle-icon icon-g-angle-right"></span>
                     </a>
-                    <div class="sub-menu-container-one animated fadeInDown">
-                        <nav class="nav flex-column ">
+                    <div id="dropdown-one" class="sub-menu-container-one animated fadeInDown">
+                        <!--<span class="toggle-icon icon-g-angle-right"></span>-->
+                        <nav id="doDrop" class="nav flex-column ">
                             <a class="nav-link" href="#">Creat orders</a>
                             <a class="nav-link" href="#">All orders</a>
                             <a class="nav-link active" href="#">Sales reports</a>
@@ -165,15 +166,15 @@
                     </div>
                 </li>
 
-                <li class="nav-item sub-menu left-sub-menu">
+                <li class="nav-item sub-menu left-sub-menu" onclick="leftMenutwo()">
                     <a class="nav-link" href="#">
                         <i class="icon-clock"></i>
                         <br class="d-block d-sm-none">
                         <span class="menu-text">Timelogs</span>
-                        <span class="toggle-icon icon-g-angle-right"></span>
+                        <span id="toggletwo" class="toggle-icon icon-g-angle-right"></span>
                     </a>
 
-                    <div class="sub-menu-container-two animated fadeInDown">
+                    <div id="dropdown-two" class="sub-menu-container-two animated fadeInDown">
                         <nav class="nav flex-column ">
                             <a class="nav-link" href="#">Time sheet</a>
                             <a class="nav-link" href="#">Reports</a>
@@ -517,5 +518,40 @@
 	<script type="text/javascript" src="js/popper.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" scr="js/main.js"></script>
+
+<script>
+    function leftMenuOne(){
+        var x = document.getElementById("dropdown-one");
+        if(x.className === "sub-menu-container-one"){
+            x.className = "sub-menu-container-one-drop";
+        }else{
+            x.className = "sub-menu-container-one";
+        }
+
+        var t = document.getElementById("toggleOne");
+        if(t.className === "toggle-icon icon-g-angle-right"){
+            t.className = "toggle-icon-vertical icon-g-angle-right";
+        }else{
+            t.className = "toggle-icon icon-g-angle-right";
+        }
+    }
+
+    function leftMenutwo() {
+        var y = document.getElementById("dropdown-two");
+        if (y.className === "sub-menu-container-two") {
+            y.className = "sub-menu-container-two-drop";
+        } else {
+            y.className = "sub-menu-container-two";
+        }
+
+        var tw = document.getElementById("toggletwo");
+        if(tw.className === "toggle-icon icon-g-angle-right"){
+            tw.className = "toggle-icon-vertical icon-g-angle-right";
+        }else{
+            tw.className = "toggle-icon icon-g-angle-right";
+        }
+    }
+
+</script>
 </body>
 </html>

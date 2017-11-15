@@ -473,14 +473,10 @@ img {
 .details-item-owner-box .item-owner-actions-box{
     margin-top: 10px;
 }
-//.nav-tabs{
-//    //border-bottom: 2px solid #ddd;
-//    border-width: 0rem;
-//}
+
 .nav-tabs .nav-link.active, .nav-tabs .nav-link {
     color: #4a97fd;
     background-color: transparent;
-    //border: 2px ;
     border-bottom: 2px solid #4a97fd;
 }
 .nav-tabs .nav-link {
@@ -491,10 +487,8 @@ img {
     margin: 0 0.2rem 0 0;
 }
 .nav-tabs .nav-link {
-   // border: 2px solid transparent;
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
-    //transition: border 2s;
 }
 .responsive-tabs .tab-more {
     display: none;
@@ -569,8 +563,6 @@ img {
 
 
 .responsive-tabs .nav-item {
-    //border-bottom: 2px solid #ffffff;
-
     &:after {
         content: "";
         background: #4a97fd;
@@ -589,12 +581,6 @@ img {
         transform: scale(1) !important;
     }
 }
-
-
-//.responsive-tabs .nav-item:hover:after {
-//    transform: scale(1) !important;
-//}
-
 
 .clearfix .flex-column .nav-item{
     border-left: 2px solid #ffffff;
@@ -621,7 +607,6 @@ img {
     opacity: 1;
     left: 6.25rem;
     top: -120px;
-    //background-color: #ffffff;
     width: 140px;
     padding-left: 10px;
     border-radius: 4px;
@@ -639,7 +624,6 @@ img {
     display: none;
     visibility: hidden;
     opacity: 0;
-    //box-shadow: $shadow;
 }
 .sub-menu .sub-menu-container-one .nav {
     box-shadow: $shadow;
@@ -674,15 +658,6 @@ img {
 
 
 
-
-
-
-
-
-
-
-
-//for responsive
 @media (max-width: 700px) {
     .topbar .nav-item .profile-name{
         display: none;
@@ -701,8 +676,8 @@ img {
 }
 @media (max-width: 700px) {
     .left-sidebar{
-        display: none;
-        visibility: hidden;
+        //display: none;
+        //visibility: hidden;
     }
     .page-wrapper{
         margin-left: 0px !important;
@@ -742,27 +717,90 @@ img {
     .left-sidebar .nav-item .nav-link .text-break-point{
         display: none;
     }
+    //.left-sub-menu:hover .sub-menu-container-one{
+    //    display: list-item;
+    //    opacity: 1;
+    //    left: 12.25rem;
+    //    top: -120px;
+    //    width: 140px;
+    //    padding-left: 10px;
+    //    border-radius: 4px;
+    //    visibility: visible;
+    //    z-index: 1;
+    //}
+    //
+    //.left-sub-menu:hover .sub-menu-container-two{
+    //    display: list-item;
+    //    opacity: 1;
+    //    left: 12.25rem;
+    //    top: -50px;
+    //    width: 140px;
+    //    padding-left: 10px;
+    //    border-radius: 4px;
+    //    visibility: visible;
+    //    z-index: 1;
+    //}
+    //
+    .sub-menu .toggle-icon{
+        display: block !important;
+        margin-left: 98%;
+        font-size: 14px;
+        transition: 200ms;
+        margin-top: auto;
+        transform: rotate(90deg)
+    }
     .left-sub-menu:hover .sub-menu-container-one{
-        display: list-item;
-        opacity: 1;
-        left: 12.25rem;
-        top: -120px;
-        width: 140px;
-        padding-left: 10px;
-        border-radius: 4px;
-        visibility: visible;
+       display: none;
+    }
+
+    .left-sub-menu .sub-menu-container-one-drop .nav{
+        box-shadow: none;
+        margin-top: -20px;
         z-index: 1;
+    }
+    .left-sub-menu .sub-menu-container-one-drop{
+        display: block;
+        overflow: hidden;
+        opacity: 1;
+        visibility: visible;
+        position: unset;
+        margin-left: 30px;
+        margin-top: -10px;
+    }
+
+     .toggle-icon-vertical{
+        display: block !important;
+        margin-left: 98%;
+        font-size: 14px;
+        transition: 200ms;
+        margin-top: auto;
+        //-webkit-transform: rotate(90deg);
+        //-moz-transform: rotate(90deg);
+        //-ms-transform: rotate(90deg);
+        //-o-transform: rotate(90deg);
+        //transform: rotate(90deg)!important;
+
     }
 
     .left-sub-menu:hover .sub-menu-container-two{
-        display: list-item;
-        opacity: 1;
-        left: 12.25rem;
-        top: -50px;
-        width: 140px;
-        padding-left: 10px;
-        border-radius: 4px;
-        visibility: visible;
+        display: none;
+    }
+    .left-sub-menu .sub-menu-container-two-drop .nav{
+        box-shadow: none;
+        margin-top: -20px;
         z-index: 1;
     }
+    .left-sub-menu .sub-menu-container-two-drop{
+        display: block;
+        overflow: hidden;
+        opacity: 1;
+        visibility: visible;
+        position: unset;
+        margin-left: 30px;
+        margin-top: -15px;
+    }
+
+
 }
+.show{
+    display: block;}
