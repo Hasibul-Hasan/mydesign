@@ -148,7 +148,7 @@
                     </a>
                 </li>
 
-                <li class="nav-item sub-menu left-sub-menu" onclick="leftMenuOne()">
+                <li id="test" class="nav-item sub-menu left-sub-menu" onclick="leftMenuOne()">
                     <a class="nav-link" href="#">
                         <i class="icon-basket"></i>
                         <br class="d-block d-sm-none">
@@ -175,7 +175,7 @@
                     </a>
 
                     <div id="dropdown-two" class="sub-menu-container-two animated fadeInDown">
-                        <nav class="nav flex-column ">
+                        <nav id="doDropTwo" class="nav flex-column ">
                             <a class="nav-link" href="#">Time sheet</a>
                             <a class="nav-link" href="#">Reports</a>
                         </nav>
@@ -502,13 +502,10 @@
                         </div>
                     </div>
                     <!--End timeline-->
-
                 </div>
             </div>
             <!--End contact details-->
-
         </div>
-
     </div>
     <!-- End page wrapper-->
 </div>
@@ -551,6 +548,15 @@
             tw.className = "toggle-icon icon-g-angle-right";
         }
     }
+
+    $('.nav > li #doDrop a').click(function(e){
+        e.stopPropagation();
+    });
+
+    $('.nav > li #doDropTwo a').click(function(e){
+        e.stopPropagation();
+    });
+
 
 </script>
 </body>
