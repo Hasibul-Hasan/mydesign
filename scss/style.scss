@@ -279,6 +279,10 @@ a {
     margin: 0 0 0.2rem 0;
     position: relative;
 }
+.mobile-left-menu-bar {
+            display: none;
+            margin-left: -40px;
+        }
 
 .sub-menu {
     position: relative;
@@ -663,32 +667,86 @@ img {
         display: none;
     }
 }
-@media (min-width: 300px) {
-    .mobile-left-menu-bar {
-        display: none;
-    }
-}
 
 @media (max-width: 700px) {
     .details-container.details-left-panel{
         width: 100% !important;
+
     }
 }
-@media (max-width: 700px) {
+
+@media (max-width: 740px) {
+    .topbar {
+        .navbar-header{
+            display: none;
+            visibility: hidden;
+        }
+        .mobile-left-menu-bar{
+            display: block!important;
+            visibility: visible;
+            margin-left: -205%;
+        }
+
+    }
     .left-sidebar{
+        display: none;
+        visibility: hidden;
+    }
+    .topbar{
         //display: none;
         //visibility: hidden;
     }
     .page-wrapper{
+        margin-left: 0vw;
+
+        .d-table-cell{
+            .card-deck{
+                width: 72%;
+            }
+            .details-item-about-box{
+                width: 70%;
+
+            }
+            .details-item-owner-box{
+                width: 70%;
+            }
+            .details-item-timeline-box{
+                width: 70%;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 700px) {
+
+    .page-wrapper{
         margin-left: 0px !important;
         margin-top: -35px;
+
+
     }
     .d-table-cell{
         display: unset !important;
+
+            .details-item-about-box{
+                width: 100%!important;
+            }
+            .details-item-owner-box{
+                width: 102% !important;
+            }
+            .details-item-timeline-box{
+                width: 100% !important;
+            }
+    }
+
+    .card-deck{
+        width: 105% !important;
     }
     .card-deck .card-body{
         flex: auto !important;
-        width: 100%;
+        width: 100% !important;
     }
     .details-item-owner-box .item-owner-actions-box .btn{
         width: 100% !important;
@@ -697,6 +755,37 @@ img {
     .details-item-owner-box .item-owner-actions-box{
         display: initial !important;
     }
+
+    .mobile-navbar-header{
+        width: auto;
+        height: 60px;
+        box-shadow: $shadow;
+        display: block !important;
+        margin-top: -60px;
+
+        .navbar-brand{
+            float: left;
+            border: none;
+            padding: 15px;
+            color: inherit;
+            display: flex;
+            box-shadow: none;
+            margin-top: -20px;
+
+            img{
+                    height: 60px;
+
+            }
+        }
+        .closed-left-bar{
+            cursor: pointer;
+            font-size: 18px;
+            float: right;
+        }
+    }
+
+
+
 
 }
 
@@ -717,30 +806,6 @@ img {
     .left-sidebar .nav-item .nav-link .text-break-point{
         display: none;
     }
-    //.left-sub-menu:hover .sub-menu-container-one{
-    //    display: list-item;
-    //    opacity: 1;
-    //    left: 12.25rem;
-    //    top: -120px;
-    //    width: 140px;
-    //    padding-left: 10px;
-    //    border-radius: 4px;
-    //    visibility: visible;
-    //    z-index: 1;
-    //}
-    //
-    //.left-sub-menu:hover .sub-menu-container-two{
-    //    display: list-item;
-    //    opacity: 1;
-    //    left: 12.25rem;
-    //    top: -50px;
-    //    width: 140px;
-    //    padding-left: 10px;
-    //    border-radius: 4px;
-    //    visibility: visible;
-    //    z-index: 1;
-    //}
-    //
     .sub-menu .toggle-icon{
         display: block !important;
         margin-left: 98%;
@@ -774,12 +839,6 @@ img {
         font-size: 14px;
         transition: 200ms;
         margin-top: auto;
-        //-webkit-transform: rotate(90deg);
-        //-moz-transform: rotate(90deg);
-        //-ms-transform: rotate(90deg);
-        //-o-transform: rotate(90deg);
-        //transform: rotate(90deg)!important;
-
     }
 
     .left-sub-menu:hover .sub-menu-container-two{
@@ -799,8 +858,4 @@ img {
         margin-left: 30px;
         margin-top: -15px;
     }
-
-
 }
-.show{
-    display: block;}
